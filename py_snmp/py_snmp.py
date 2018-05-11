@@ -22,7 +22,8 @@ class SnmpVersion(object):
 class PySnmp(object):
     def __init__(self, host, community, timeout, version=SnmpVersion.Version1):
         if ":" in host:
-            self.host, self.port = "".split(":", 2)
+            self.host, self.port = host.split(":", 2)
+            self.port = int(self.port)
         else:
             self.host = host
             self.port = DEFAULT_PORT

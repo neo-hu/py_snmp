@@ -28,7 +28,7 @@ setup(
     packages=['py_snmp'],
     install_requires=[
     ],
-    long_description=read('README.rst'),
+    long_description=read('README.md'),
     classifiers=[
     ],
     zip_safe=False
